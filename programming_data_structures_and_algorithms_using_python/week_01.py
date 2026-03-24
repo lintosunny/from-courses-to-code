@@ -14,6 +14,7 @@
 # some steps are executed conditionally
 #  * do something if a value meets some requirement
 
+
 # way 1: find the gratest common divisor
 def gcd(m: int, n: int) -> int:
 
