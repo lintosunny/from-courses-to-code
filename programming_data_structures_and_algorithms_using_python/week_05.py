@@ -1,4 +1,4 @@
-# --- Exception Handling ---
+# ----- Exception Handling -----
 # Errors can be anticipated or unexpected. 
 # Exception - predictable errors
 # Exception handling - contingency plan for exception. If something goes wrong, provide 'corrective action'
@@ -29,7 +29,7 @@ except KeyError:
 
 
 
-# --- Standard input and standard output ---
+# ----- Standard input and standard output -----
 # Input is always a string, convert as required
 input_data = input()
 input_data = input('Enter here: ')
@@ -61,4 +61,48 @@ print("next line.")
 
 
 
-# --- Handling Files ---
+# ----- Handling Files -----
+fh = open("gcd.py", "r")
+# "r", Read - Opens a file for reading only
+# "w", Write - Creates an empty file to write to 
+# "a", Append - Append to an existing file
+
+content = fh.read()
+# Reads entire file into name as a single string
+
+content = fh.readline()
+# Reads one line into name - lines end with '\n'
+
+content = fh.readlines()
+# Reads entire file as list of strings
+
+fh.write(s)
+# Write string s to file
+
+fh.writelines(l)
+# Write a list of lines l to file
+
+fh.close()
+# Flushes output buffer and decouples file handle
+
+fh.flush()
+# Manually forces write to disk
+
+# Print line by line
+for line in fh.readlines():
+    print(line)
+
+# Copying a file
+infile = open("input.txt", "r")
+outfile = open("output.txt", "w")
+contents = infile.readlines()
+outfile.writelines(contents)
+infile.close()
+outfile.close()
+
+infile = open("input.txt", "r")
+outfile = open("output.txt", "w")
+for line in infile.readlines():
+    outfile.write(line)
+infile.close()
+outfile.close()
