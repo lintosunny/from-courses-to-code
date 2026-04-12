@@ -106,3 +106,7 @@ for line in infile.readlines():
     outfile.write(line)
 infile.close()
 outfile.close()
+
+
+
+# ----- String Functions -----
