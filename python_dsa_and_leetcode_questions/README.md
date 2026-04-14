@@ -86,3 +86,43 @@ Ex: log₂(8) = 3
 ## Space Complexity
 Memory usage
 
+# Classes
+A class in Python is a blueprint for creating objects that bundle data (attributes) and behavior (methods) together.
+
+```
+class Cookie:
+    def __init__(self, color):
+        self.color = color
+    
+    def get_color(self):
+        return self.color
+    
+    def change_color(self, color):
+        self.color = color
+
+cookie_one = Cookie('Green')
+cookie_two = Cookie('Red')
+
+print(cookie_one.get_color())  # Green
+print(cookie_two.get_color())  # Red
+
+cookie_one.change_color('Blue')
+print(cookie_one.get_color())  # Blue
+```
+
+# Pointers
+***Memory location of the num1 and the num2 will be same***
+```
+num1 = 11
+num2 = num2
+```
+
+***Memory location of the num1 and the num2 will be different***
+```
+num1 = 11
+num2 = num2
+num2 = 22
+```
+
+***for dictionaries location will be same***
+
