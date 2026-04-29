@@ -42,16 +42,13 @@ class LinkedList:
   
 
   
- 
-  
 def find_kth_from_end(ll, k):       
     slow = ll.head
     fast = ll.head 
 
     for _ in range(k):
         if fast is None:
-            return None 
-        
+            return None     
         fast = fast.next
 
     while fast is not None:
@@ -59,9 +56,6 @@ def find_kth_from_end(ll, k):
         fast = fast.next
 
     return slow
-
-
-
 
 
 
