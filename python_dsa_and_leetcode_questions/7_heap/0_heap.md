@@ -289,7 +289,6 @@ For a node at index `i`:
 2 × i + 1
 ```
 
----
 
 # Example
 
@@ -403,7 +402,7 @@ Very simple calculations.
 | Fast Root Access | ✅ |
 | Good for Searching | ❌ |
 
----
+
 
 # Main Uses of Heaps
 
