@@ -7,5 +7,56 @@
 
 # You need to implement the group_anagrams(strings) function and return a list of lists, where each inner list contains a group of anagrams according to the above requirements.
 
-t = "adc"
-print("".join(sorted(t)))
+# ----- Option 1 -----
+def group_anagrams(strings):
+    anagrams_groups = {}
+    
+    for string in strings:
+        key = ''.join(sorted(string))
+        
+        if key in anagrams_groups:
+            anagrams_groups[key].append(string)
+        else:
+            anagrams_groups[key] = [string]
+    
+    return list(anagrams_groups.values())
+
+# ----- Option 2 -----
+def group_anagrams(strings):
+    anagrams_groups = {}
+    
+    for string in strings:
+        key = ''.join(sorted(string))
+        
+        if key not in anagrams_groups:
+            anagrams_groups[key] = []
+
+        anagrams_groups[key].append(string)
+    
+    return list(anagrams_groups.values()) 
+
+
+print("1st set:")
+print( group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]) )
+
+print("\n2nd set:")
+print( group_anagrams(["abc", "cba", "bac", "foo", "bar"]) )
+
+print("\n3rd set:")
+print( group_anagrams(["listen", "silent", "triangle", "integral", "garden", "ranged"]) )
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    1st set:
+    [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]
+
+    2nd set:
+    [['abc', 'cba', 'bac'], ['foo'], ['bar']]
+
+    3rd set:
+    [['listen', 'silent'], ['triangle', 'integral'], ['garden', 'ranged']]
+
+"""
