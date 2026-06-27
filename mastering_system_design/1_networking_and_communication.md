@@ -108,3 +108,18 @@ flowchart LR
 - Microservices & Containers: Use internal private IPs for communication
 
 > Abstraction layers are built on top of one another. Application depends on services, services depends on networks, and networks depends on addressing. 
+
+## How DNS Works
+```mermaid
+flowchart LR
+
+    subgraph DNS["DNS Lookup"]
+        direction LR
+
+        U[User]
+        D[DNS Server]
+
+        U -- "Query: google.com" --> D
+        D -- "Response: 142.250.190.78" --> U
+    end
+```
